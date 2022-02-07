@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Button } from 'react-bootstrap';
 
 class Ejercicio2 extends React.Component {
   constructor(props) {
@@ -34,6 +35,45 @@ class Ejercicio2 extends React.Component {
             </li>
           </li>
         </ul>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Titulo</Form.Label>
+            <Form.Control type="text" placeholder="Introduzca titulo" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Autor</Form.Label>
+            <Form.Control type="text" placeholder="Introduzca autor" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Fecha de publicación</Form.Label>
+            <Form.Control type="date" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Número de paginas</Form.Label>
+            <Form.Control type="number" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Portada (URL de imagen)</Form.Label>
+            <Form.Control
+              type="url"
+              placeholder="https://example.com"
+              pattern="https://.*"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Idioma</Form.Label>
+            <Form.Control type="text" placeholder="Introduzca idioma" />
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       </div>
     );
   }
